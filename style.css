@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+ :root{
+    --color1: hsl(237, 63%, 64%);
+    --color: hsl(236, 72%, 79%);
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue:  hsl(234, 14%, 74%);
+    --Grayish-Blue:   hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+body{
+    background: #F7F7FF ;
+    position: relative ;
+}
+body::after,
+body::before{
+    content: '';
+    background-size: cover;
+    z-index: -999;
+    position: absolute ;
+}
+body::after{
+    width: 20em;
+    height: 30em;
+    background-image: url(images/bg-top.svg);
+    top: 0; right:0;
+}
+body::before{
+    width: 15em;
+    height: 20em;
+    background-image: url(images/bg-bottom.svg);
+    bottom: -5em; left:1em;
+}
+header{
+    width: 100%;
+    text-align: center;
+    padding-top: .5em;
+    margin-bottom: 3.8em;
+}
+header h2{
+    color: var(--Dark-Grayish-Blue);
+    padding-block: .6em;
+    opacity: .7;
+}
+header button{
+    width: 5em;
+    height: 2.5em;
+    border-radius: 30px;
+    margin-inline: 1em;
+    border: 0;
+    outline: 0;
+    background: var(--color1);
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+header button:hover{
+    background: var(--color);
+}
+header button .circle{
+    content: '';
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    position: absolute;
+    top: .25em; right: .25em;
+    background: var(--Very-Light-Grayish-Blue);
+    transition: transform .4s linear;
+}
+header .moode{
+    color: var(--Grayish-Blue);
+    font-size: 1.1rem;
+    font-weight: 700;
+    opacity: .5;
+}
+main{
+    display: flex;
+    width: 100%;
+    min-height: 23.5em;
+    justify-content: center;
+    /* margin-bottom: 2em ; */
+}
+main section{
+    display: flex;
+    justify-content: center;
+    width: 60em;
+    height: 100%;
+}
+main .card{
+    background: #FFFFFF;
+    width: 17em;
+    min-height: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    text-align: center;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue);
+}
+
+main .prof{
+    background: linear-gradient( to bottom, var(--color) , var(--color1) );
+    transform: scaleY(1.15);
+    color: var(--Very-Light-Grayish-Blue)
+}
+main .card h3{
+    margin-block: .7em;
+}
+
+main .card  .priceBox{
+    font-size: 3rem;
+    margin-block: .3em;
+}
+main .card .about{
+    display: flex;
+    flex-direction: column;
+    height: 10em;
+    width: 15em;
+    margin-bottom: .5em;
+}
+main .card .about span{
+    font-size:1rem;
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+    height: calc(10em / 3);
+    width: 100%;
+    padding-block: 1em;
+}
+main .card .about .topBottom{
+    border-top: 1px solid var(--Light-Grayish-Blue);
+}
+main .card button{
+    width: 100%;
+    height: 2.5em;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background: var(--color1);
+    font-weight: 700;
+    color: var(--Very-Light-Grayish-Blue);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+main .card button:hover{
+    background: none;
+    border: 1px solid var(--color1);
+    color: var(--color1);
+}
+main .prof button{
+    background: var(--Very-Light-Grayish-Blue);
+    color: var(--color1);
+}
+main .prof button:hover{
+    background: none;
+    border: 1px solid var(--Very-Light-Grayish-Blue);
+    color: var(--Very-Light-Grayish-Blue);
+}
+.attribution{
+    width: 100%;
+    padding-top: 2em;
+    text-align: center;
+}
+
+
+@media (max-width: 950px){
+    main section{
+        flex-direction: column;
+        width: 100%;
+        gap: 1em;
+        align-items: center;
+    }
+    main .prof{
+        transform: scaleY(1);
+    }
+}
+
